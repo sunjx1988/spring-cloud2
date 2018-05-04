@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/sunjx1988/spring-cloud2/tree/master/config-file
+          username: sunjx1988@163.com
+          password: 274122s
+server:
+  port: 8089
