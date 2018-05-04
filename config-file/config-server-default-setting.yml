@@ -1,5 +1,10 @@
 info:
   profile: default
+spring:
+  application:
+    name: demo-server
+server:
+  port: 8888
 
 author:
   first-name: sun
