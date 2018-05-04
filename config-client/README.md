@@ -1,0 +1,1 @@
+**这里需要格外注意：client 获取配置服务的这些属性必须配置在bootstrap.properties中，这样config-server中的配置信息才能被正确加载。**
