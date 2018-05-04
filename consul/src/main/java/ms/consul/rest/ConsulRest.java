@@ -11,7 +11,7 @@ public class ConsulRest {
     @Autowired
     private DiscoveryClient discoveryClient;
 
-    @RequestMapping(value = "get_service_name")
+    @RequestMapping
     public String serviceName(){
         return "Service Name: " + discoveryClient.getServices();
     }

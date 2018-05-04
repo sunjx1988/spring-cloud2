@@ -8,4 +8,4 @@ https://www.consul.io/downloads.html
 consul agent -dev
 ``
 
-3.运行application，访问 http://localhost:8083/get_service_name
+3.运行application，访问 http://localhost:8083

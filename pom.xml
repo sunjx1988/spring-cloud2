@@ -13,6 +13,7 @@
         <module>eureka-client</module>
         <module>consul</module>
         <module>eureka-consumer</module>
+        <module>feign</module>
     </modules>
 
     <parent>

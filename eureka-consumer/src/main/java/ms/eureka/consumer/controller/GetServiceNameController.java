@@ -21,12 +21,11 @@ public class GetServiceNameController {
     @Autowired
     private RestTemplate restTemplate;
 
-    @RequestMapping(value = "rmi_get_service_name")
+    @RequestMapping
     @ResponseBody
     public String getServiceName(){
         ServiceInstance serviceInstance = loadBalancerClient.choose(serviceApplicationName);
         String url = "http://" + serviceInstance.getHost() + ":" + serviceInstance.getPort() + "/get_service_name";
-        System.out.println(url);
         return restTemplate.getForObject(url, String.class);
     }
 }
