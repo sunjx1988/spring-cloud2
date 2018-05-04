@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: consul
+  cloud:
+    consul:
+      host: localhost
+      discovery:
+        port: 8084
+server:
+  port: 8083
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8081/eureka/
