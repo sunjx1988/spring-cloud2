@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] [%X{MDC_ID}] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="LOGSTASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+        <param name="Encoding" value="UTF-8"/>
+        <remoteHost>jx.sun</remoteHost>
+        <port>4567</port>
+
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder" >
+            <customFields>{"appname":"eureka-client"}</customFields>
+        </encoder>
+
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="LOGSTASH" />
+        <appender-ref ref="STDOUT" />
+    </root>
+
+</configuration>
