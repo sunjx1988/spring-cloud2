@@ -20,6 +20,7 @@
         <module>config-client</module>
         <module>hystrix</module>
         <module>zuul</module>
+        <module>zipkin</module>
     </modules>
 
     <parent>
